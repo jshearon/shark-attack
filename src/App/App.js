@@ -13,11 +13,18 @@ class App extends React.Component {
     this.setState({ students });
   }
 
+  killAStudent = () => {
+    studentsData.followTheLight();
+    const students = studentsData.livingStudents();
+    this.setState({ students });
+  }
+
   render() {
     const { students } = this.state;
     return (
       <div className="App">
         <h2>Shark Tank</h2>
+        <button className="btn btn-danger" onClick={this.killAStudent}>Shark Attack</button>
         <SharkTank students={students}/>
       </div>
     );

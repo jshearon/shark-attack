@@ -16,8 +16,9 @@ class SharkTank extends React.Component {
     ));
     return (
       <div>
-        <h2>Lookout for Sharks!</h2>
+        <div className="d-flex justify-content-center flex-wrap">
         { studentCards }
+        </div>
       </div>
     );
   }

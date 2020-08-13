@@ -4,6 +4,7 @@ const studentShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
+  imgUrl: PropTypes.string.isRequired,
   isAlive: PropTypes.bool.isRequired,
 });
 
