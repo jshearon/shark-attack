@@ -144,7 +144,7 @@ const students = [
     firstName: 'Billy',
     lastName: 'Campbell',
     imgUrl: 'https://avatars0.githubusercontent.com/u/62917622?v=4',
-    isAlive: true,
+    isAlive: false,
   },
 ];
 
@@ -154,9 +154,7 @@ const dearlyBeloved = () => students.filter((student) => student.isAlive === fal
 
 const followTheLight = () => {
   const aliveStudentIds = livingStudents().map((student) => student.id);
-  console.error(aliveStudentIds);
   const randomStudent = Math.floor(Math.random() * (aliveStudentIds.length));
-  console.error(randomStudent);
   students.find((student) => student.id === aliveStudentIds[randomStudent]).isAlive = false;
 };
 
