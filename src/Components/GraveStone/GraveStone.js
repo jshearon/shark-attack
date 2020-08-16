@@ -1,6 +1,7 @@
 import React from 'react';
 
 import studentShape from '../../helpers/propz/studentShape';
+import './GraveStone.scss';
 
 class GraveStone extends React.Component {
   static propTypes = {
@@ -10,9 +11,9 @@ class GraveStone extends React.Component {
   render() {
     const { student } = this.props;
     return (
-          <div className="card mx-4 mt-4 p-3 bg-danger text-light graveStone">
-            <div className="thumbnail"><img src={student.imgUrl} alt="Student" /></div>
-            <p>{student.firstName}<br/>{student.lastName}</p>
+          <div className="text-light graveStone d-flex flex-column justify-content-start text-light">
+            <img src={student.imgUrl} alt="Student" className="thumbnail" />
+            <p className="hereLies">Here Lies<br/>{student.firstName}<br/>{student.lastName}</p>
           </div>
     );
   }

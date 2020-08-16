@@ -1,0 +1,37 @@
+.graveStone {
+  background-image: url('../../Assets/Images/tombstone.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 10vw;
+  width: 8vw;
+  font-size: 10%;
+  .thumbnail {
+    width: 50%;
+    margin-top: 20%;
+    margin-left: 30%;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: fill;
+    object-position: center;
+    filter: grayscale(1);
+  }
+  .hereLies {
+    width: 50%;
+    margin-left: 30%;
+  }
+}
+
+.graveStone:not(:first-child) {
+  margin-left: -20px;
+}
+
+.graveStone:nth-of-type(even) {
+  z-index: 1;
+  transform: translate3d(0px, -25px, -200px);
+}
+
+.graveStone:nth-of-type(odd) {
+  filter: drop-shadow(5px 0px 5px #222);
+  z-index: 2;
+}
