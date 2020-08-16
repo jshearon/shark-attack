@@ -155,7 +155,9 @@ const dearlyBeloved = () => students.filter((student) => student.isAlive === fal
 const followTheLight = () => {
   const aliveStudentIds = livingStudents().map((student) => student.id);
   const randomStudent = Math.floor(Math.random() * (aliveStudentIds.length));
-  students.find((student) => student.id === aliveStudentIds[randomStudent]).isAlive = false;
+  if (aliveStudentIds.length > 0) {
+    students.find((student) => student.id === aliveStudentIds[randomStudent]).isAlive = false;
+  }
 };
 
 export default { livingStudents, dearlyBeloved, followTheLight };

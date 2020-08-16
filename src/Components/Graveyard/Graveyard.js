@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import studentShape from '../../helpers/propz/studentShape';
 import GraveStone from '../GraveStone/GraveStone';
+import './GraveYard.scss';
 
 class GraveYard extends React.Component {
   static propTypes = {
@@ -15,7 +16,7 @@ class GraveYard extends React.Component {
     ));
     return (
       <div>
-        <div className="d-flex justify-content-center flex-wrap">
+        <div className="graveYard d-flex justify-space-around mx-2">
           { graveStones }
         </div>
     </div>

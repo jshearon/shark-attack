@@ -1,12 +1,53 @@
-.studentCard {
-  width: 10rem;
-  img {
-    width: 5rem;
-    height: 5rem;
-    margin: auto;
+.student {
+  width: 5rem;
+  position: relative;
+  .thumbnail {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: .25rem;
     border-radius: 50%;
     overflow: hidden;
     object-fit: fill;
     object-position: center;
   }
+}
+
+.bubble {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.floatDelay-1 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: -1s;
+}
+
+.floatDelay-2 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+.floatDelay-3 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+.floatDelay-4 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }

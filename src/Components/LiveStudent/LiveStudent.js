@@ -2,6 +2,7 @@ import React from 'react';
 
 import studentShape from '../../helpers/propz/studentShape';
 import './LiveStudent.scss';
+import bubble from '../../Assets/Images/bubble.png';
 
 class LiveStudent extends React.Component {
   static propTypes = {
@@ -10,10 +11,12 @@ class LiveStudent extends React.Component {
 
   render() {
     const { student } = this.props;
+    const randMarginLR = Math.floor(Math.random() * (5 - 1) + 1);
+    const randMarginT = Math.floor(Math.random() * (5 - 1) + 1);
     return (
-          <div className="card mx-4 mt-4 p-3 bg-dark text-light studentCard">
-            <div className="thumbnail"><img src={student.imgUrl} alt="Student" /></div>
-            <p>{student.firstName}<br/>{student.lastName}</p>
+          <div className={ `mx-${randMarginLR} mt-${randMarginT} text-light student floatDelay-${randMarginT}`}>
+            <img src={student.imgUrl} alt="Student" className="thumbnail" />
+            <img src={bubble} alt="bubble" className="bubble" />
           </div>
     );
   }
